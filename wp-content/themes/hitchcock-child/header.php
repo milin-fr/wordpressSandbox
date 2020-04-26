@@ -50,10 +50,6 @@
 					} 
 					?>
 					
-					<li class="header-search">
-						<?php get_search_form(); ?>
-					</li>
-					
 				</ul>
 				
 				<div class="clear"></div>
