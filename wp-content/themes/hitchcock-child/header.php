@@ -56,34 +56,6 @@
 				
 			</div><!-- .section-inner -->
 			
-			<button type="button" class="nav-toggle">
-					
-				<div class="bars">
-					<div class="bar"></div>
-					<div class="bar"></div>
-					<div class="bar"></div>
-				</div>
-				
-			</button><!-- .nav-toggle -->
-			
-			<div class="mobile-navigation">
-			
-				<ul class="mobile-menu">
-																			
-					<?php 
-					if ( has_nav_menu( 'primary' ) ) {
-						wp_nav_menu( $nav_args );
-					} else {
-						wp_list_pages( $list_pages_args );
-					}
-					?>
-					
-				</ul>
-				
-				<?php get_search_form(); ?>
-			
-			</div><!-- .mobile-navigation -->
-			
 		</div><!-- .navigation -->
 
 		<?php $image_image_url = get_header_image() ? get_header_image() : get_template_directory_uri() . '/images/bg.jpg'; ?>
