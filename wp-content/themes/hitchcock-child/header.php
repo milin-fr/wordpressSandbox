@@ -108,7 +108,7 @@
 				</ul><!-- .social-menu -->
 			
 			<?php endif; ?>
-			
+			<h2 class="blog-title home-icon"><a href="<?php echo esc_url( home_url() ); ?>" title="Retour à l'accueil" rel="home"><i class="fas fa-home"></i></a></h2>
 		</div><!-- .header -->
 
 		<main id="site-content">

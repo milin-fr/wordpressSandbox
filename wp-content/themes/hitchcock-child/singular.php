@@ -10,34 +10,6 @@ if ( have_posts() ) :
 				
 				<div class="post-container">
 					
-					<?php 
-
-					if ( ! post_password_required() ) :
-					
-						$post_format = get_post_format();
-
-						if ( $post_format == 'gallery' ) : ?>
-						
-							<div class="featured-media">	
-				
-								<?php hitchcock_flexslider( 'post-image' ); ?>
-								
-								<div class="clear"></div>
-								
-							</div><!-- .featured-media -->
-							
-						<?php elseif ( has_post_thumbnail() ) : ?>
-								
-							<div class="featured-media">
-					
-								<?php the_post_thumbnail( 'post-image' ); ?>
-								
-							</div><!-- .featured-media -->
-								
-						<?php endif; ?>
-						
-					<?php endif; ?>
-					
 					<div class="post-header">
 
 						<?php if ( is_single() ) : ?>

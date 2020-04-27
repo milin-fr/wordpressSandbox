@@ -508,6 +508,13 @@ input[type="button"],
 	text-shadow: 0 1px 0 rgba(0,0,0,0.2);
 }
 
+.home-icon
+{
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+}
+
 
 /* Social Menu --------------------------------------- */
 
