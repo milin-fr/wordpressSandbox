@@ -37,3 +37,12 @@ if ( ! function_exists( 'load_js' ) ) :
 	
 endif;
 add_action("wp_enqueue_scripts", "load_js");
+
+add_theme_support("menus");
+
+register_nav_menus(
+
+	array(
+		"social-menu" => __("Social menu", "theme")
+	)
+);
