@@ -2,3 +2,15 @@
 Theme Name: mySandBox
 Author: Mikhail ILIN
 */
+
+header
+{
+    height: 5rem;
+    width: 100%;
+    box-shadow:  0 30px 50px #489dcf;
+}
+
+body
+{
+    background-color: black;
+}
