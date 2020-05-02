@@ -6,7 +6,6 @@ $style_attr = $thumbnail_url ? ' style="background-image: url( ' . $thumbnail_ur
 ?>
 
 <a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>" <?php post_class( 'post' ); ?><?php echo $style_attr; ?>>
-
 	<div class="post-overlay">
 		
 		<?php if ( is_sticky() && ! is_single() ) : ?>

@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <div class="content section-inner">
-
 	<?php
 	
 	$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;

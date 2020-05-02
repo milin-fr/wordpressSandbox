@@ -50,11 +50,43 @@
 					} 
 					?>
 					
+					<li class="header-search">
+						<?php get_search_form(); ?>
+					</li>
+					
 				</ul>
 				
 				<div class="clear"></div>
 				
 			</div><!-- .section-inner -->
+			
+			<button type="button" class="nav-toggle">
+					
+				<div class="bars">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+				</div>
+				
+			</button><!-- .nav-toggle -->
+			
+			<div class="mobile-navigation">
+			
+				<ul class="mobile-menu">
+																			
+					<?php 
+					if ( has_nav_menu( 'primary' ) ) {
+						wp_nav_menu( $nav_args );
+					} else {
+						wp_list_pages( $list_pages_args );
+					}
+					?>
+					
+				</ul>
+				
+				<?php get_search_form(); ?>
+			
+			</div><!-- .mobile-navigation -->
 			
 		</div><!-- .navigation -->
 
@@ -108,7 +140,7 @@
 				</ul><!-- .social-menu -->
 			
 			<?php endif; ?>
-			<h2 class="blog-title home-icon"><a href="<?php echo esc_url( home_url() ); ?>" title="Retour à l'accueil" rel="home"><i class="fas fa-home"></i></a></h2>
+			
 		</div><!-- .header -->
 
 		<main id="site-content">
