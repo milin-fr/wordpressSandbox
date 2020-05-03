@@ -93,16 +93,22 @@
 		<?php $image_image_url = get_header_image() ? get_header_image() : get_template_directory_uri() . '/images/bg.jpg'; ?>
 		
 		<div class="header-image" style="background-image: url( <?php echo $image_image_url; ?> );"></div>
-	
+		
+		<?php 
+			
+			if ( is_front_page() ) : ?><!-- Display header only on front page -->
+				
 		<div class="header section-inner">
 		
+		<?php endif; ?>
+
 			<?php 
 			
 			if ( get_theme_mod( 'custom_logo' ) ) :
 
 				hitchcock_custom_logo();
 				
-			else : 
+			elseif ( is_front_page() ) : // Display header only on front page
 				
 				$title_type = is_singular() ? '2' : '1'; ?>
 		
@@ -112,13 +118,13 @@
 				
 			<?php endif;
 			
-			if ( get_bloginfo( 'description' ) ) : ?>
+			if ( get_bloginfo( 'description' ) && is_front_page() ) : ?> <!-- Display header only on front page -->
 			
 				<p class="blog-description"><?php echo bloginfo( 'description' ); ?></p>
 			
 			<?php endif;
 			
-			if ( has_nav_menu( 'social' ) ) : ?>
+			if ( has_nav_menu( 'social' ) && is_front_page() ) : ?>
 			
 				<ul class="social-menu">
 							
@@ -138,9 +144,14 @@
 					?>
 					
 				</ul><!-- .social-menu -->
-			
+					
 			<?php endif; ?>
 			
+		<?php 
+		
+		if ( is_front_page() ) : ?><!-- Display header only on front page -->
 		</div><!-- .header -->
+
+		<?php endif; ?>
 
 		<main id="site-content">
