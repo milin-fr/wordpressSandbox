@@ -22,7 +22,7 @@ function ga_scripts_page()
         <?php
     }
     
-    $header_scripts = get_option('header_scripts',"none");
+    $header_scripts = stripslashes(get_option('header_scripts',"none"));
 
     ?>
     <div class="wrap">
@@ -40,7 +40,7 @@ function display_header_scripts()
 {
     $header_scripts = get_option('header_scripts','none');
 
-    echo $header_scripts;
+    echo stripslashes($header_scripts);
 }
 
 add_action('wp_head', 'display_header_scripts')
